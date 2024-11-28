@@ -10,7 +10,7 @@ class ContactApp extends React.Component {
     super(props);
     this.state = {
       contacts: getData(),
-      editingContact: null, // Store the contact being edited
+      editingContact: null, 
     };
 
     this.onDeleteHandler = this.onDeleteHandler.bind(this);
@@ -23,42 +23,35 @@ class ContactApp extends React.Component {
   onDeleteHandler(id) {
     const contacts = this.state.contacts.filter(contact => contact.id !== id);
     this.setState({ contacts });
-    
-    // Show toast notification when a contact is deleted
     toast.success('Contact deleted successfully!');
   }
+  
 
-  // Handler to add new contact
   onAddContactHandler(contact) {
     this.setState(prevState => ({
       contacts: [
         ...prevState.contacts,
         {
-          id: +new Date(), // Unique ID based on timestamp
-          imageUrl: '/images/default.jpg', // Add imageUrl property
-          ...contact, // Add other properties (name, tag)
+          id: +new Date(), 
+          imageUrl: '/images/default.jpg', 
+          ...contact, 
         },
       ],
     }));
-
-    // Show toast notification when a new contact is added
     toast.success('New contact added successfully!');
   }
-
-  // Handler to set contact for editing
   onEditContactHandler(id) {
     const contactToEdit = this.state.contacts.find(contact => contact.id === id);
     this.setState({ editingContact: contactToEdit });
   }
 
-  // Handler to save the updated contact after editing
   onEditContactSubmit(updatedContact) {
     const contacts = this.state.contacts.map(contact =>
       contact.id === updatedContact.id ? updatedContact : contact
     );
     this.setState({
       contacts,
-      editingContact: null, // Reset editingContact after saving
+      editingContact: null, 
     });
 
     // Show toast notification when a contact is edited
@@ -85,7 +78,7 @@ class ContactApp extends React.Component {
             />
           ))}
         </div>
-        <ToastContainer /> {/* Display toast notifications */}
+        <ToastContainer />
       </div>
     );
   }

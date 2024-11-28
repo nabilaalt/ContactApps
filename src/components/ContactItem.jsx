@@ -4,6 +4,7 @@ import ContactItemBody from './ContactItemBody';
 import ContactItemImage from './ContactItemImage';
 import DeleteButton from './DeleteButton';
 import EditButton from './EditButton';
+
 // eslint-disable-next-line react/prop-types
 function ContactItem({ imageUrl, name, tag, id, onDelete, onEdit }) {
   return (

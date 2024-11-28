@@ -18,6 +18,18 @@ This project is a simple contact management app built using React and Vite. It a
 - **React Toastify**: Used to show notifications to the user for successful actions.
 - **CSS**: For styling the app’s components.
 
+## Preview
+
+Input Contact
+![alt text](<Screenshot (3020).png>) 
+
+Edit Contact
+![alt text](<Screenshot (3021).png>) 
+
+Contact List
+![alt text](<Screenshot (3022).png>)
+
+
 ## Setup Instructions
 
 ### Prerequisites
