@@ -26,7 +26,7 @@ Input Contact
 Edit Contact
 ![alt text](<Screenshot (3021).png>) 
 
-Contact List
+Delete Contact
 ![alt text](<Screenshot (3022).png>)
 
 
